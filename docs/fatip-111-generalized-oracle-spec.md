@@ -22,11 +22,34 @@ Some examples of potential use:
 
 In centralized or semi-centralized oracles, a trusted party or low number of trusted partners simply attests to the validity of the data using cryptographic signature(s). However, as implied, the data is only as trustworthy as the data provider, also known as “The Oracle Problem”. This challenge is often regarded as one of the great limitations of blockchain technology’s applicability in traditional domains.
 
-
-
+In a decentralized oracle system, different on-chain tokenomics or (less often) governance mechanics are used to mediate trust. In some systems, these economic incentives are similar to the “encouragement and punishment”  mechanisms seen in Proof-of-Stake systems which find quite good.
+<there is a very close coupling to gas mechanics FAT-108 and being an oracle should be harder than just verifying to provide trust, looking for additional fees?
+PegNet uses a combination of PoW(miners calculate hard hash and push data) and PoS(stakers that have a lot of funds just push data) providers and average settlement on majority of data. ChainLink better at this stuff as provider, needs more investigation, as potentially with this contract format users can build the very same PegNet but in smart-contracts >
 
 
 ## Specification
+
+### Initiate contract
+
+### Getting values
+
+Raw JSON value when getting data
+```
+{
+  "rows": [{
+      "id": "0",
+      "owner": "eq-monitor",
+      "value": 56800,
+      "median": 56863,
+      "timestamp": "1564096083"
+    }
+  ],
+  "more": true
+}
+```
+
+### Updating values
+### Connecting update server
 
 ## Implementation
 
